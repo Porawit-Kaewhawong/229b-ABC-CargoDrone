@@ -19,6 +19,6 @@ public class PlayerController : MonoBehaviour
         var rawInput = moveAction.ReadValue<Vector2>();
         var clampInput = Vector2.ClampMagnitude(rawInput, 1f);
 
-        rb.AddForce(new Vector3(clampInput.x, 0, clampInput.y) * moveSpeed, ForceMode.Acceleration);
+        transform.Translate(new Vector3(clampInput.x, 0, clampInput.y) * moveSpeed * Time.deltaTime);
     }
 }
