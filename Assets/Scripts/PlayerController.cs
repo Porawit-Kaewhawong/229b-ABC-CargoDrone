@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private InputAction moveAction;
 
     private FixedJoint joint;
-    private GameObject attachedCrate;
+    public GameObject attachedCrate;
 
     void Start()
     {
